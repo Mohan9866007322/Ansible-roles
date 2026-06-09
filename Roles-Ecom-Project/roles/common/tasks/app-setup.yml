@@ -14,13 +14,13 @@
       system: true 
       home: /app
 
-  - name: Download catalogue code
+  - name: Download {{ component }} code
     ansible.builtin.get_url:
-      url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip 
-      dest: /tmp/catalogue.zip
+      url: https://roboshop-artifacts.s3.amazonaws.com/{{ component }}-v3.zip 
+      dest: /tmp/{{ component }}.zip
 
-  - name: Unzip catalogue code
+  - name: Unzip {{ component }} code
     ansible.builtin.unarchive:
-      src: /tmp/catalogue.zip
+      src: /tmp/{{ component }}.zip
       dest: /app
       remote_src: yes

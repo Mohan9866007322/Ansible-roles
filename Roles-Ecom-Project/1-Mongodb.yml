@@ -1,0 +1,6 @@
+- name: mongodb
+  hosts: mongodb
+  become: true
+  roles:
+    - mongodb
+    

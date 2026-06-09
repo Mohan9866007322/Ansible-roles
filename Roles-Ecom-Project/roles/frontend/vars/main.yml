@@ -1,0 +1,5 @@
+CATALOGUE_HOST: "catalogue.marpukosam.xyz"
+USER_HOST: "user.marpukosam.xyz"
+CART_HOST: "cart.marpukosam.xyz"
+SHIPPING_HOST: "shipping.marpukosam.xyz"
+PAYMENT_HOST: "payment.marpukosam.xyz"

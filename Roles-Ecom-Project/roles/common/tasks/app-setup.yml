@@ -1,0 +1,26 @@
+  - name: Create application directory
+    ansible.builtin.file:
+      path: /app
+      state: directory
+      owner: roboshop
+      group: roboshop
+      mode: '0755'
+      
+  - name: User creation
+    ansible.builtin.user:
+      name: roboshop
+      state: present
+      shell: /sbin/nologin
+      system: true 
+      home: /app
+
+  - name: Download catalogue code
+    ansible.builtin.get_url:
+      url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip 
+      dest: /tmp/catalogue.zip
+
+  - name: Unzip catalogue code
+    ansible.builtin.unarchive:
+      src: /tmp/catalogue.zip
+      dest: /app
+      remote_src: yes

@@ -1,0 +1,16 @@
+  - name: Disable Nodejs module
+    ansible.builtin.command: dnf module disable nodejs -y
+    when: ansible_os_family == "dnf"
+
+  - name: Enable Nodejs module
+    ansible.builtin.command: dnf module enable nodejs:20 -y
+    when: ansible_os_family == "dnf"
+
+  - name: Install Node.js and npm
+    ansible.builtin.yum:
+      name: nodejs
+      state: present
+
+  - name: Install npm dependencies
+    community.general.npm:
+      path: /app

@@ -1,0 +1,4 @@
+MYSQL_HOST: "mysql.marpukosam.xyz"
+MYSQL_ROOT_USER: "root"
+MYSQL_ROOT_PASSWORD: "roboshsop@1"
+CART_HOST: "cart.marpukosam.xyz"

@@ -1,0 +1,5 @@
+CART_HOST: cart.marpukosam.xyz
+USER_HOST: user.marpukosam.xyz
+RABBITMQ_HOST: rabbitmq.marpukosam.xyz
+RABBITMQ_USER: roboshop
+RABBITMQ_PASS: roboshop123 

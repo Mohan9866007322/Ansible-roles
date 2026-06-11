@@ -1,0 +1,2 @@
+REDIS_HOST: "redis.marpukosam.xyz"
+MONGODB_HOST: "mongodb.marpukosam.xyz"

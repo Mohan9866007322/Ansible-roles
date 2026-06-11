@@ -10,7 +10,7 @@ DOMAIN_NAME="marpukosam.xyz" # replace with your domain
 cat <<EOF > enable_ssh_password.sh
 #!/bin/bash
 # Set the password for ec2-user
-echo "ec2-user:DevOps321" | chpasswd
+echo "robo:DevOps321" | chpasswd
 
 # Enable Password Authentication in the main SSH config
 sed -i 's/^.*PasswordAuthentication.*/PasswordAuthentication yes/g' /etc/ssh/sshd_config
